@@ -1,6 +1,8 @@
 body{
-    width: 1000px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     flex-direction: column;
 
 }
 header{
@@ -9,4 +11,25 @@ header{
     text-align: center;
     background-color: rgb(177, 14, 68);
     color: aliceblue;
+    width: 1000px;
+}
+footer{
+    width: 1000px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(131, 126, 126);
+}
+.menu{
+     display: flex;
+     flex-direction: row;
+     width: 1000px;
+     height: 40px;
+     background-color: rgb(20, 145, 124);
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row ;
+    width: 1000px;
+    height: 700px;
 }
