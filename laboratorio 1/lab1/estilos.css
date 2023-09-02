@@ -1,0 +1,84 @@
+.contenedor{
+    display: flex; 
+    flex-direction: column;
+    align-content: stretch;
+   
+    width: 900px; height:500px;
+    border: 1px solid;
+}
+.con1{
+    display: flex;
+    flex-direction: row;
+    width: 900px; height:200px; 
+    display: flex; text-align: center; 
+    height: auto; justify-content: space-around; 
+    padding: 10px;
+   
+}
+.con1 img{width: 90px; height: 100px;}
+.con1 h3{color:red}
+.titulo2 {color: blue; display: inline;
+}
+.titulo3{ color: green; display: inline; padding: 100px;}
+.titulo4{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 2px;
+}
+.con2{
+    display: flex;
+    flex-direction: row;
+    border: 0.1px solid;
+    width: 900px; height:250px; 
+}
+.con3{
+    text-align: center;
+    width: 900px; height:50px; 
+}
+.cont1{
+    width: 700px; height: 250;
+padding: 20px;
+}
+#t1{
+    color: blue; display: inline;
+}
+#t2{display: inline;}
+
+body{
+    display: flex; align-items: center; justify-content: center;
+    margin: auto;
+    padding: 50px;
+}
+
+.vertical
+{
+    
+    background-color: #366F91;
+    list-style-type: none;
+    
+    justify-content: space-between;
+
+    width: 140px;
+    padding: 10px 10px 30px 10px;
+}
+.vertical li
+{
+    margin-top: 10px;
+    height: 20px;
+   
+}
+.vertical li a{
+    width: 90px;
+    display: inline-block;
+    
+}
+.vertical li a:link,
+.vertical li a:visited {
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #7C7C7C;
+    
+}
+
