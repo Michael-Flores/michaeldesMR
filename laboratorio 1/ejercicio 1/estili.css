@@ -52,11 +52,12 @@ body{
 table{
     
     border-collapse: collapse;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 tr, td {
-    border: 2px solid #000; 
+    border: 1px solid #000; 
     padding: 8px; 
+    height: 0px;
   }
 .con3{
     height: 130px;
