@@ -15,8 +15,6 @@
 
             $resultado = $cantidad * ($conversiones[$unidad_destino] / $conversiones[$unidad_origen]);
 
-            echo "<table style= ' display: flex; 
-            align-items: center; 
-            justify-content: center;'><th style= 'border: 3px solid yellow ; background-color: rgb(150, 144, 144);'>$cantidad $unidad_origen = $resultado $unidad_destino</th></table> ";
+            echo "<table style= ' display: flex; align-items: center; justify-content: center;'><th style= 'border: 3px solid yellow ; background-color: rgb(150, 144, 144);'>$cantidad $unidad_origen = $resultado $unidad_destino</th></table> ";
         
         ?>
