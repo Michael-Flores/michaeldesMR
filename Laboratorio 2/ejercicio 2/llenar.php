@@ -1,4 +1,4 @@
-<form action="eliminar.php" method="get">
+<form action="eliminar.php" method="post">
 <?php
 $numero=$_GET['numero'];
 for ($i=0;$i<$numero;$i++){

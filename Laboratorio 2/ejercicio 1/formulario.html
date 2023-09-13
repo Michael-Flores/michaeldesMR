@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="combertir.php"  method="post" >
+        <label for="">Cantidad:</label>
+        <input type="number" name="cantidad"  >
+        <br><br>
+
+        <label for="">Unidad de Medida:</label>
+        <select name="unidad_origen"  >
+            <option value="mm">Milimetro </option>
+            <option value="cm">Centimetro</option>
+            <option value="dm">Decimetro</option>
+            <option value="m">Metro</option>
+            <option value="km">Kilometro</option>
+        </select>
+        <br><br>
+
+        <label for="">Unidad de Destino:</label>
+        <select name="unidad_destino" >
+            <option value="mm">Milimetro </option>
+            <option value="cm">Centimetro </option>
+            <option value="dm">Decimetro </option>
+            <option value="m">Metro </option>
+            <option value="km">Kilometro </option>
+        </select>
+        <br><br>
+
+        <input type="submit"  value="Convertir">
+    </form>
+
+    
+</body>
+</html>
