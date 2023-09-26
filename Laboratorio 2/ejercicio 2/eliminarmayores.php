@@ -1,14 +1,14 @@
 <?php 
 function rmayores($vector1,$numero){
-     $vector2=array();
-    foreach($vector1 as $valor1){
-        if ($valor1<=$numero){
-        
-            $vector2[]= $valor1;
-
+    $arr=array();
+    foreach($vector1 as $valor){
+        if ($valor<=$numero){
+             $arr[]=$valor;
         }
      }
-    
-    return $vector2; 
+
+     foreach($arr as $arry){
+        echo $arry.",";
+     }
 }
 ?>
