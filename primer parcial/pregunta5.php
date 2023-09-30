@@ -32,9 +32,9 @@
                     <td><?php echo $row['correo']; ?></td>
                     <td><?php echo $row['nombre']; ?></td>
                     <td><?php echo $row['rol']; ?></td>
-                    <td><a href="actualizar.php?id=<?php echo $row['id'];?>">Cambiar a <?php if($row['rol']=="Administrador"){echo "usuario";}
+                    <td><a href="actualizar.php?id=<?php echo $row['id'];?>"><?php if($row['rol']=="Administrador"){echo "<div style='width: auto; height: auto; background-color: rgb(136, 216, 136); border: 1px solid;'>Cambiar a usuario</div>";}
                     else{
-                        echo "administrador";
+                        echo "<div style='width: auto; height: auto; background-color: rgb(224, 104, 104); border: 1px solid;'>Cambiar a administrador</div>";
                     }?> </a></td>
 
                 </tr>
@@ -48,7 +48,7 @@
     <?php }
     ?>
 
-    <a href="formu_alumno.php">Crear Alumno</a>
+  
 
 
 
