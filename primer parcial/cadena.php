@@ -15,7 +15,7 @@
         }
     }
 if ($encontrar) {
-echo $cadena1." : tiene la palabra: ".implode("-",$resultado) . "<br>";
+echo $cadena1." : tiene la palabra: ".implode(" ",$resultado) . "<br>";
 
 
 $resultado = [];

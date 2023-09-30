@@ -1,0 +1,30 @@
+body{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin: auto;
+    padding: 50px;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.tablas{
+    border-collapse: collapse;
+}
+.tablas th{
+    background-color: rgb(50, 17, 138);
+    border: 1px solid;
+    color: aliceblue;
+}
+.tablas td{
+    border: 1px solid;
+    padding: 4px;
+}
+.tablas td img{
+    width: 20px;
+    height: 20px;
+}
