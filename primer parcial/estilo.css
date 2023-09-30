@@ -33,3 +33,16 @@ body{
     text-decoration: none;
     color: #232525;
 }
+.div{
+ 
+    width: auto; 
+    height: auto; 
+    background-color: rgb(224, 104, 104); 
+    border: 1px solid ;
+}
+.div2{
+    width: auto; 
+    height: auto; 
+    background-color: 
+    rgb(136, 216, 136); border: 1px solid;
+}
