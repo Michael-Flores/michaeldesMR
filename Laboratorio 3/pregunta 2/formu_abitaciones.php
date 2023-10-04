@@ -1,5 +1,3 @@
-<?php include('verificar.php');?>
-<?php include('permiso.php');?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,10 +1,9 @@
 <?php
-include('verificar.php');
-include('permiso.php');
+
 include("conexion.php");
 $id=$_GET['id'];
 
-$sql="DELETE FROM alumno WHERE id=$id";
+$sql="DELETE FROM habitacion WHERE id=$id";
 
  //echo $sql;
  if ($con->query($sql) === TRUE) {
