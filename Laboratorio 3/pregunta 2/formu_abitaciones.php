@@ -11,33 +11,34 @@
 
 <body>
     <?php include('conexion.php');
-    $sql = "SELECT id,nombre from  carrera";
+    $sql = "SELECT id,descripcion,numero_camas  FROM tipo_habitacion ";
     $resultado = $con->query($sql);
     ?>
 
     <form action="create.php" method="post" enctype="multipart/form-data"
 >
+        
         <div>
-            <label for="fotografia">Fotografia</label>
-            <input type="file" name="fotografia">
+            <label for="nombres">Numero De Abitacion</label>
+            <input type="number" name="nro">
         </div>
         <div>
-            <label for="nombres">Nombres</label>
-            <input type="text" name="nombres">
+            <label for="apellidos">Baño Pribado</label>
+            <input type="number" name="bano">
         </div>
         <div>
-            <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos">
+            <label for="CU">Espacio</label>
+            <input type="number" name="espacio" step="0.01" min="0">
         </div>
         <div>
-            <label for="CU">CU</label>
-            <input type="text" name="CU">
+            <label for="CU">precio</label>
+            <input type="number" name="precio" step="0.01" min="0">
         </div>
         <div>
-        <label for="idcarrera">Carrera:</label>
-            <select name="idcarrera">
+        <label for="idcarrera">Tipo de Abitacion:</label>
+            <select name="id">
                 <?php while ($row = $resultado->fetch_assoc()) { ?>
-                    <option value="<?php echo $row['id'] ?>"><?php echo $row['nombre'] ?></option>
+                    <option value="<?php echo $row['id'] ?>"><?php echo $row['descripcion'] ?></option>
 
 
                 <?php } ?>

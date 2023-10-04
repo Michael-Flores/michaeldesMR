@@ -76,7 +76,7 @@
     <?php  
     ?>
 
-        <a href="form_update_abitacion.php">Crear Abitacion</a>
+        <a href="formu_abitaciones.php">Crear Abitacion</a>
     <?php  ?>
 
 
