@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+ 
+  
+</head>
+<body>
+  <h1></h1>
+  <img  style=" width: 200px;" id="imagen"   src="imagen/paisaje.jpg" alt="">
+  <div>
+  <label for="cantidad">cantidad:</label>
+  <input type="number" id="cant" value="40">
+</div>
+  <button onclick="agrandar()">Agrandar</button>
+  <button onclick="reducir()">Reducir</button>
+  <br>
+  
+  <script>
+    function agrandar() {
+      var cantidad = document.getElementById("cant").value;
+      var imagen = document.getElementById("imagen");
+      var width = parseInt(imagen.style.width)+ parseInt(cantidad); 
+      imagen.style.width = width + "px";
+    }
+
+    function reducir() {
+      var cantidad = document.getElementById("cant").value;
+      var imagen = document.getElementById("imagen");
+      var width = parseInt(imagen.style.width) - cantidad;
+      imagen.style.width = width + "px";
+    }
+  </script>
+</body>
+</html>
+
+</body>
+</html>
