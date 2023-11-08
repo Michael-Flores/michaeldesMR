@@ -7,7 +7,7 @@ function cargarContenido(abrir){
 }
 function Autenticar() {
     var contenedor;
-    contenedor = document.getElementById('mensaje');
+    contenedor = document.getElementById('contenido');
     var formulario = document.getElementById("form-login");
     var parametros = new FormData(formulario);
     fetch("autenticar.php",
