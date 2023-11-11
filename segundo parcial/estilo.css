@@ -1,0 +1,40 @@
+.inicio{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.menu{
+    height: 40px;
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 150px;
+    justify-content: space-between;
+}
+.men{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+}
+.men button{
+    width: 50px;
+    text-align: center;
+}
+.titulo{
+    height: 30px;
+    width: auto;
+    background-color: rgb(209, 164, 18);
+}
+.principal{
+    width: auto;
+    height: 200px;
+}
+.btn{
+    background-color: brown;
+    
+}
