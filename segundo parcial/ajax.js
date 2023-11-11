@@ -11,6 +11,137 @@ function cargarContenido(abrir){
 ajax.setRequestHeader("Content-Type","text/html; charset=utf-8")
 ajax.send();
 }
+
+
+
+function crear(){
+    const app = document.getElementById('principal');
+
+    const numInput = document.createElement('input');
+    numInput.type = 'number';
+    numInput.id = 'inputNumero';
+    
+    const numLabel = document.createElement('label');
+    numLabel.textContent = 'Tabla del';
+    
+    const sumaRadio = document.createElement('input');
+    sumaRadio.type = 'radio';
+    sumaRadio.name = 'operation';
+    sumaRadio.value = 'suma';
+    sumaRadio.id = 'radioSuma';
+    
+    const sumaLabel = document.createElement('label'); 
+    sumaLabel.textContent = 'Suma';
+    
+    const restaRadio = document.createElement('input');
+    restaRadio.type = 'radio';
+    restaRadio.name = 'operation';
+    restaRadio.value = 'resta';
+    restaRadio.id = 'radioResta';
+    
+    const restaLabel = document.createElement('label');
+    restaLabel.textContent = 'Resta';
+    
+    const factorialRadio = document.createElement('input');
+    factorialRadio.type = 'radio'; 
+    factorialRadio.name = 'operation';
+    factorialRadio.value = 'factorial';
+    factorialRadio.id = 'radioFactorial';
+    
+    const factorialLabel = document.createElement('label');
+    factorialLabel.textContent = 'Factorial';
+    
+    const numInput2 = document.createElement('input');
+    numInput2.type = 'number';
+    numInput2.id = 'inputHasta';
+    
+    const br= document.createElement('br')
+    const hastaLabel = document.createElement('label');
+    
+    hastaLabel.textContent = 'Hasta';
+    
+    const button = document.createElement('button');
+    button.textContent = 'Calcular';
+    
+    app.appendChild(numLabel);
+    app.appendChild(numInput);
+    
+    app.appendChild(sumaRadio);
+    app.appendChild(sumaLabel);
+    
+    app.appendChild(restaRadio);
+    app.appendChild(restaLabel);
+    
+    app.appendChild(factorialRadio);
+    app.appendChild(factorialLabel);  
+    app.appendChild(br)
+    app.appendChild(hastaLabel);
+    app.appendChild(numInput2);
+    
+    app.appendChild(button);
+    
+  
+    button.addEventListener('click', () => {
+    
+      const num1 = parseInt(numInput.value);
+      const num2 = parseInt(numInput2.value);
+    
+      const operation = document.querySelector('input[name="operation"]:checked').value;
+    
+   
+      const table = document.createElement('table');
+    
+
+      let header = '';
+      header += '<tr>';
+    
+      header += '</tr>';
+
+      for(let i = 1; i <= num2; i++) {
+    
+        let row = '';
+        row += '<tr>';
+        row += `<td>${num1}</td>`;
+        row += `<td>${operation === 'suma' ? '+' : '-'}</td>`;
+        row += `<td>${i}</td>`;
+        row += `<td>=</td>`;
+    
+        let result;
+        if(operation === 'suma') {
+          result = num1 + i;
+        } else if(operation === 'resta') {
+          result = num1 - i;
+        } else if(operation === 'factorial') {
+          result = factorial(num1);
+        }
+    
+        row += `<td>${result}</td>`;
+        row += '</tr>';
+    
+        header += row;
+    
+      }
+    
+      table.innerHTML = header;
+  
+      app.appendChild(table);
+    
+    });
+    
+    function factorial(num) {
+      if (num === 0 || num === 1) 
+        return 1;
+      for (var i = num - 1; i >= 1; i--) {
+        num *= i;
+      }
+      return num;
+    }
+    
+}
+
+
+
+
 function cargar(abrir){
     var contenedor;
     contenedor = document.getElementById('principal');
