@@ -82,7 +82,8 @@ function crear(){
     
   
     button.addEventListener('click', () => {
-    
+      const cam=document.getElementById('principal');
+      cam.style.height="auto";
       const num1 = parseInt(numInput.value);
       const num2 = parseInt(numInput2.value);
     
@@ -103,16 +104,16 @@ function crear(){
         row += '<tr>';
         row += `<td>${num1}</td>`;
         row += `<td>${operation === 'suma' ? '+' : '-'}</td>`;
-        row += `<td>${i}</td>`;
+        row += `<td>${operation === 'suma' ? i : num1+i}</td>`;
         row += `<td>=</td>`;
     
         let result;
         if(operation === 'suma') {
           result = num1 + i;
         } else if(operation === 'resta') {
-          result = num1 - i;
+          result = (num1+i) - num1;
         } else if(operation === 'factorial') {
-          result = factorial(num1);
+          
         }
     
         row += `<td>${result}</td>`;
@@ -128,14 +129,7 @@ function crear(){
     
     });
     
-    function factorial(num) {
-      if (num === 0 || num === 1) 
-        return 1;
-      for (var i = num - 1; i >= 1; i--) {
-        num *= i;
-      }
-      return num;
-    }
+    
     
 }
 
