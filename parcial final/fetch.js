@@ -78,3 +78,17 @@ function eliminarLibro(id) {
       .then(data => contenedor.innerHTML = data);
 
 }
+
+function actualizarPersona() {
+  var contenedor;
+  contenedor = document.getElementById('contenido');
+  var formulario = document.getElementById("form-persona");
+  var parametros = new FormData(formulario);
+  fetch("update.php",
+      {
+          method: "POST",
+          body: parametros
+      })
+      .then(response => response.text())
+      .then(data => contenedor.innerHTML = data);
+}
