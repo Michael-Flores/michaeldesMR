@@ -18,7 +18,7 @@ $resultado = $con->query($sql);
 if ($resultado->num_rows > 0) {
 ?>
     
-    <table>
+    <table border 1px>
         <tr>
             <th>imagen</th>
             <th><a href="cargarContenido('listar.php')?orden=titulo">titulo </a></th>
@@ -30,7 +30,7 @@ if ($resultado->num_rows > 0) {
         <?php while ($row = $resultado->fetch_assoc()) {
         ?>
             <tr>
-            <td><img width="100px" src="images/<?php echo $row['imagen'];  ?>" alt=""> </td>
+            <td><img width="100px" src="imagen/<?php echo $row['imagen'];  ?>" alt=""> </td>
             <td><?php echo $row['titulo'] ?> </td>
                 <td><?php echo $row['autor'] ?></td>
                 <td><?php echo $row['editorial'] ?></td>

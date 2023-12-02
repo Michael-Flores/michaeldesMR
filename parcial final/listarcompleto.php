@@ -9,7 +9,7 @@ if (!isset($_GET['orden'])) {
 
 
 include('conexion.php');
-$sql = "SELECT per.id,imagen,titulo,autor,editorial,anio,idusuario,idcarrera, FROM libros per 
+$sql = "SELECT per.id,imagen,titulo,autor,editorial,anio,idusuario,idcarrera FROM libros per 
 left join editoriales pro on per.ideditorial=pro.id 
 order by $orden
 ";
@@ -18,7 +18,7 @@ $resultado = $con->query($sql);
 if ($resultado->num_rows > 0) {
 ?>
     
-    <table>
+    <table border 1px>
         <tr>
             <th>imagen</th>
             <th><a href="cargarContenido('listar.php')?orden=titulo">titulo </a></th>
@@ -52,3 +52,5 @@ if ($resultado->num_rows > 0) {
 
 $con->close();
 ?>
+
+
