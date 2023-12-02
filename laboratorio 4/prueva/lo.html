@@ -1,44 +1,38 @@
-<label for="cantidad">Cantidad de ejercicios:</label>
-<input type="number" id="cantidad" value="5">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cambiar Color Div</title>
+</head>
 
-<button onclick="generarEjercicios()">Generar ejercicios</button>
+<body>
 
-<div id="contenido"></div>
+<div id="div1">Contenido Div 1</div>
+<div id="div2">Contenido Div 2</div>
 
-<button onclick="calificar()">Calificar</button>
+<input type="color" id="colorPicker">
+
+<select id="selectDiv">
+  <option value="div1">Div 1</option>
+  <option value="div2">Div 2</option>
+</select>
+
+<select id="selectPropiedad">
+  <option value="background-color">Color de Fondo</option>
+  <option value="color">Color de Texto</option>  
+</select>
+
+<button onclick="cambiarColor()">Cambiar Color</button>
+
 <script>
- function generarEjercicios() {
-  var cantidad = document.getElementById("cantidad").value;
-  var operaciones = ["+", "-", "*", "/"];
+function cambiarColor() {
+  var div = document.getElementById(selectDiv.value);  
+  var propiedad = selectPropiedad.value;
+  var color = colorPicker.value;  
   
-  var ejercicios = "";
-  
-  for(var i = 0; i < cantidad; i++) {
-    var operacion = operaciones[Math.floor(Math.random()*4)];
-    var a = Math.floor(Math.random()*10) + 1;
-    var b = Math.floor(Math.random()*10) + 1;
-    
-    ejercicios += "<div>" + a + " " + operacion + " " + b + " = <input type='number'></div><br>";
-  }
-
-  document.getElementById("contenido").innerHTML = ejercicios;
-}
-
-function calificar() {
-  var contenido = document.getElementById("contenido");
-  var divs = contenido.querySelectorAll("div");
-
-  for(var i = 0; i < divs.length; i++) {
-    var div = divs[i];
-    var input = div.querySelector("input");
-    var texto = div.textContent.replace("=", "").trim();
-    var resultado = eval(texto); 
-
-    if(parseInt(input.value) === resultado) {
-      input.style.backgroundColor = "lightgreen";
-    } else {
-      input.style.backgroundColor = "pink"; 
-    }
-  }
+  div.style[propiedad] = color; 
 }
 </script>
+
+</body>
+</html>

@@ -53,3 +53,11 @@ function calificar() {
     }
   }
 }
+
+function cambiarColor() {
+  var div = document.getElementById(selectDiv.value);  
+  var propiedad = selectPropiedad.value;
+  var color = colorPicker.value;  
+  
+  div.style[propiedad] = color; 
+}

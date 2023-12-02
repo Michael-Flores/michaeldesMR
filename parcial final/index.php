@@ -16,20 +16,20 @@
             <button id="btn1">Opciónes</button>
             <button id="btn2">Detalle 1</button>
             <button id="btn3">Detalle 2</button>
-            <div id="sub-menu"></div>
+            <div id="sub-menu" ></div>
         </div>
 
         <div class=" men2">
             <div id="menu">
                 <button><a href="index.php">Pregunta 1</a></button>
                 <hr >
-                <button onclick="cargarContenido('pregunta2.php'), cambiartitulo('Pregunta2.php')">Pregunta 2</button>
+                <button onclick="cargarContenido4('pregunta2.php'), cambiartitulo('Pregunta2.php')">Pregunta 2</button>
                 <hr >
                 <button>Pregunta 3</button>
                 <hr >
                 <button onclick="cargarContenido('listar.php'), cambiartitulo('Pregunta 4'),cargarSubmenu('submenu.html')">Pregunta 4</button>
                 <hr >
-                <button>Pregunta 5</button>
+                <button onclick="cargarContenido4('pregunta5.html'),cambiartitulo('Pregunta5.html') ">Pregunta 5</button>
             </div>
             <div id="titulo"> Pregunta 1</div>
             <div id="contenido">
