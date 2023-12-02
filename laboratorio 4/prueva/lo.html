@@ -1,0 +1,44 @@
+<label for="cantidad">Cantidad de ejercicios:</label>
+<input type="number" id="cantidad" value="5">
+
+<button onclick="generarEjercicios()">Generar ejercicios</button>
+
+<div id="contenido"></div>
+
+<button onclick="calificar()">Calificar</button>
+<script>
+ function generarEjercicios() {
+  var cantidad = document.getElementById("cantidad").value;
+  var operaciones = ["+", "-", "*", "/"];
+  
+  var ejercicios = "";
+  
+  for(var i = 0; i < cantidad; i++) {
+    var operacion = operaciones[Math.floor(Math.random()*4)];
+    var a = Math.floor(Math.random()*10) + 1;
+    var b = Math.floor(Math.random()*10) + 1;
+    
+    ejercicios += "<div>" + a + " " + operacion + " " + b + " = <input type='number'></div><br>";
+  }
+
+  document.getElementById("contenido").innerHTML = ejercicios;
+}
+
+function calificar() {
+  var contenido = document.getElementById("contenido");
+  var divs = contenido.querySelectorAll("div");
+
+  for(var i = 0; i < divs.length; i++) {
+    var div = divs[i];
+    var input = div.querySelector("input");
+    var texto = div.textContent.replace("=", "").trim();
+    var resultado = eval(texto); 
+
+    if(parseInt(input.value) === resultado) {
+      input.style.backgroundColor = "lightgreen";
+    } else {
+      input.style.backgroundColor = "pink"; 
+    }
+  }
+}
+</script>

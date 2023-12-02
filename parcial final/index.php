@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="ajax.js"></script>
+    <script src="fetch.js"></script>
 </head>
 <body>
-    <div class="inicio">
+    <div class="inicio" id="inicio">
        <div class=" inicio1">
         <div id="sib-menu" class="me1">
             <img src="imagen/usfx.png" alt="">
@@ -19,13 +21,13 @@
 
         <div class=" men2">
             <div id="menu">
-                <button>Pregunta 1</button>
+                <button><a href="index.php">Pregunta 1</a></button>
                 <hr >
-                <button>Pregunta 2</button>
+                <button onclick="cargarContenido('pregunta2.php'), cambiartitulo('Pregunta2.php')">Pregunta 2</button>
                 <hr >
                 <button>Pregunta 3</button>
                 <hr >
-                <button>Pregunta 4</button>
+                <button onclick="cargarContenido('listar.php'), cambiartitulo('Pregunta 4'),cargarSubmenu('submenu.html')">Pregunta 4</button>
                 <hr >
                 <button>Pregunta 5</button>
             </div>
@@ -40,7 +42,7 @@
                     <div class="p2">
                      <p class="pa1">BARJA CORAGUA ERLINDA</p>
                      <p>Carrera: Ingenieria de distemas</p>
-                     <p>Repositorio Examen: </p>
+                     <p>Repositorio Examen:<a href="https://github.com/Erlinda-Barja/DesarrolloWebEBC/tree/main/Evaluaciones/parcial%20final">https://github.com/Erlinda-Barja/DesarrolloWebEBC/tree/main/Evaluaciones/parcial%20final</a></p>
                     </div>
                 </div>
             </div>
