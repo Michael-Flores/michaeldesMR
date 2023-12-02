@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Cambiar Color Div</title>
-</head>
+<input type="number" id="cantidad" value="5">
 
-<body>
+<button onclick="generarOperacion('+', '+')">Sumas</button>
+<button onclick="generarOperacion('-', '-')">Restas</button>
+<button onclick="generarOperacion('*','*' )">Multiplicación</button>  
+<button onclick="generarOperacion('/','/')">División</button>
 
-<div id="div1">Contenido Div 1</div>
-<div id="div2">Contenido Div 2</div>
-
-<input type="color" id="colorPicker">
-
-<select id="selectDiv">
-  <option value="div1">Div 1</option>
-  <option value="div2">Div 2</option>
-</select>
-
-<select id="selectPropiedad">
-  <option value="background-color">Color de Fondo</option>
-  <option value="color">Color de Texto</option>  
-</select>
-
-<button onclick="cambiarColor()">Cambiar Color</button>
-
+<div id="contenido"></div>
 <script>
-function cambiarColor() {
-  var div = document.getElementById(selectDiv.value);  
-  var propiedad = selectPropiedad.value;
-  var color = colorPicker.value;  
-  
-  div.style[propiedad] = color; 
+    function generarOperacion(operacion, simbolo) {
+
+// Obtener cantidad de input
+var cantidad = document.getElementById("cantidad").value; 
+
+var ejercicios = "";
+
+for(var i = 0; i < cantidad; i++) {
+
+  var a = Math.floor(Math.random()*10) + 1;
+  var b = Math.floor(Math.random()*10) + 1;
+
+  ejercicios += `${a} ${simbolo} ${b} = <input type="number"> <br>`;
+
+}
+
+document.getElementById("contenido").innerHTML = ejercicios;
+
 }
 </script>
-
-</body>
-</html>

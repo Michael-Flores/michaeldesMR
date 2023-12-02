@@ -23,7 +23,7 @@
             <div id="menu">
                 <button><a href="index.php">Pregunta 1</a></button>
                 <hr >
-                <button onclick="cargarContenido4('pregunta2.php'), cambiartitulo('Pregunta2.php')">Pregunta 2</button>
+                <button onclick="cargarContenido4('pregunta2.php'), cambiartitulo('Pregunta2.php'),cargarContenido2('operaciones.html')">Pregunta 2</button>
                 <hr >
                 <button>Pregunta 3</button>
                 <hr >

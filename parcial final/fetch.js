@@ -19,25 +19,24 @@ function cambiartitulo(titulo) {
   var cont2=document.getElementById('titulo');
   cont2.innerHTML=titulo;
 }
-function generarEjercicios() {
+function generarEjercicios(operacion,simbolo) {
   var cantidad = document.getElementById("cantidad1").value;
-  var operaciones = ["+", "-", "*", "/"];
-  
+
   var ejercicios = "";
   
   for(var i = 0; i < cantidad; i++) {
-    var operacion = operaciones[Math.floor(Math.random()*4)];
     var a = Math.floor(Math.random()*10) + 1;
     var b = Math.floor(Math.random()*10) + 1;
-    
     ejercicios += "<div>" + a + " " + operacion + " " + b + " = <input type='number'style='width: 35px;' ></div><br>";
   }
    ejercicios+="<button onclick='calificar()'>Calificar</button>"
-  document.getElementById("sub-menu").innerHTML = ejercicios;
+  document.getElementById("reultado").innerHTML = ejercicios;
+  document.getElementById("contenido").style.display="flex"
+  document.getElementById("contenido").style.flexDirection="column"
 }
 
 function calificar() {
-  var contenido = document.getElementById("sub-menu");
+  var contenido = document.getElementById("reultado");
   var divs = contenido.querySelectorAll("div");
 
   for(var i = 0; i < divs.length; i++) {
