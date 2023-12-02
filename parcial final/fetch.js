@@ -61,3 +61,20 @@ function cambiarColor() {
   
   div.style[propiedad] = color; 
 }
+
+function editarlibro(id) {
+  var contenedor;
+  contenedor = document.getElementById('contenido');
+  fetch('form_update.php?id=' + id)
+      .then(response => response.text())
+      .then(data => contenedor.innerHTML = data);
+
+}
+function eliminarLibro(id) {
+  var contenedor;
+  contenedor = document.getElementById('contenido');
+  fetch('delete.php?id=' + id)
+      .then(response => response.text())
+      .then(data => contenedor.innerHTML = data);
+
+}

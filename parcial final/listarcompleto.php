@@ -37,8 +37,8 @@ if ($resultado->num_rows > 0) {
                 <td><?php echo $row['anio'] ?></td>
                 <td><?php echo $row['idusuario'] ?></td>
                 <td class="text-center">
-                        <a class="btn btn-danger"  href="javascript:editarAlumno(<?php echo $row['id'];?>)">Editar</a>
-                        <a class="btn btn-primary" href="javascript:deleteAlumno(<?php echo $row['id'];?>)">Eliminar</a>
+                        <a  href="javascript:ditarlibro(<?php echo $row['id'];?>)">Editar</a>
+                        <a href="javascript:eliminarLibro('<?php echo $row['id']; ?>')">Eliminar</a>
                     </td>
             </tr>
         <?php } ?>
