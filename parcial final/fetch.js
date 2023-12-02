@@ -7,6 +7,7 @@ function cargarContenido(abrir){
 		.then(response => response.text())
 		.then(data => contenedor.innerHTML=data);
     con1.style.height="auto";
+    contenedor.style.height="auto"
 }
 function cargarSubmenu(abrir){
   var contenedor;

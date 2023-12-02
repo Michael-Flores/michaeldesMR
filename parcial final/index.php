@@ -21,17 +21,17 @@
 
         <div class=" men2">
             <div id="menu">
-                <button><a href="index.php">Pregunta 1</a></button>
+                <button onclick="cambiartitulo('index.php')"><a href="index.php">Pregunta 1</a></button>
                 <hr >
-                <button onclick="cargarContenido4('pregunta2.php'), cambiartitulo('Pregunta2.php'),cargarContenido2('operaciones.html')">Pregunta 2</button>
+                <button onclick="cargarContenido4('pregunta2.php'), cambiartitulo('Pregunta2.html'),cargarContenido2('operaciones.html')">Pregunta 2</button>
                 <hr >
-                <button>Pregunta 3</button>
+                <button onclick="cambiartitulo('pregunta3.php')">Pregunta 3</button>
                 <hr >
-                <button onclick="cargarContenido('listar.php'), cambiartitulo('Pregunta 4'),cargarSubmenu('submenu.html')">Pregunta 4</button>
+                <button onclick="cargarContenido('listar.php'), cambiartitulo('pregunta4.php'),cargarSubmenu('submenu.html')">Pregunta 4</button>
                 <hr >
                 <button onclick="cargarContenido4('pregunta5.html'),cambiartitulo('Pregunta5.html') ">Pregunta 5</button>
             </div>
-            <div id="titulo"> Pregunta 1</div>
+            <div id="titulo"> index.php </div>
             <div id="contenido">
                 <div class="contenido-fon">
                     <div class="p1">
